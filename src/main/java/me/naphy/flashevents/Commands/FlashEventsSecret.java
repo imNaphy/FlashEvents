@@ -21,11 +21,11 @@ public class FlashEventsSecret implements CommandExecutor {
                             return true;
                         }
                         if (!event.eventRedeemable) {
-                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b[FlashEvents] &7The time for redeeming the rewards has expired!"));
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', FlashEvents.plugin.getConfig().getString("Messages.Time expired")));
                             return true;
                         }
                         if (event.eventPlayersRedeemed.contains(sender)) {
-                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b[FlashEvents] &7You have already redeemed your rewards!"));
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', FlashEvents.plugin.getConfig().getString("Messages.Already redeemed")));
                             return true;
                         }
                         for (String command : event.eventCommands) {

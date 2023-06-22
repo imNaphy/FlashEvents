@@ -1,5 +1,14 @@
+# On plugin update, please save the changes to the file, delete it and then change the values again.
+
+
 # Toggle whether the plugin should work or not.
 Enabled: true
+
+# Configurable messages:
+Messages:
+  Time expired: "&b[FlashEvents] &7The time for redeeming the rewards has expired!"
+  Already redeemed: "&b[FlashEvents] &7You have already redeemed your rewards!"
+
 
 # The list of events
 # You can create as many events as you want, according to the example provided. Please follow the spacings, or else the plugin will break.

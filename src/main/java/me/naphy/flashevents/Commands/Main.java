@@ -9,6 +9,8 @@ import org.bukkit.command.CommandSender;
 
 public class Main implements CommandExecutor {
 
+    private String help = "&b[FlashEvents] &7List of available commands: \n\n\n &b/flashevents help &7- Displays the available commands provided by this plugin. \n &b/flashevents toggle <start/stop> &7- Turns the plugin on/off. \n &b/flashevents reload &7- Reloads the plugin, events and configuration.";
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("flashevents")) {
@@ -17,11 +19,11 @@ public class Main implements CommandExecutor {
                 return true;
             }
             if (args.length == 0) {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b[FlashEvents] &7List of available commands: \n\n &b/flashevents help &7- Displays the available commands provided by this plugin. \n &b/flashevents toggle <start/stop> &7- Turns the plugin on/off. \n &b/flashevents reload &7- Reloads the plugin, events and configuration."));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', help));
                 return true;
             }
             if (args[0].equalsIgnoreCase("help")) {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b[FlashEvents] &7List of available commands: \n\n &b/flashevents help &7- Displays the available commands provided by this plugin. \n &b/flashevents toggle <start/stop> &7- Turns the plugin on/off. \n &b/flashevents reload &7- Reloads the plugin, events and configuration."));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', help));
                 return true;
             }
             else if (args[0].equalsIgnoreCase("toggle")) {
@@ -65,7 +67,7 @@ public class Main implements CommandExecutor {
                 return true;
             }
             else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b[FlashEvents] &7List of available commands: \n\n &b/flashevents help &7- Displays the available commands provided by this plugin. \n &b/flashevents toggle <start/stop> &7- Turns the plugin on/off. \n &b/flashevents reload &7- Reloads the plugin, events and configuration."));
+                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', help));
                 return true;
             }
         }
