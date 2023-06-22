@@ -1,0 +1,29 @@
+# Toggle whether the plugin should work or not.
+Enabled: true
+
+# The list of events
+# You can create as many events as you want, according to the example provided. Please follow the spacings, or else the plugin will break.
+#  - * -
+# Each and every event should have the following properties, otherwise the plugin will become a mess:
+# Timer: how many seconds before the last (same) event and the next (same) one
+# Redeemable for: how many seconds should the event commands be redeemable
+# Message: what message that needs to be clicked should be sent
+# Commands: which commands should be executed when a player clicks the message
+#  - * -
+# Placeholders:
+# %player% = the player's name
+# %event_time% = the event's original full time
+Events:
+  FirstEvent:
+    Timer: 60
+    Redeemable for: 5
+    Message: "&cFirst example of a message that should be pressed! Can be configured: \n\n Player name: %player% \n Event time: %event_time%"
+    Commands:
+      - "msg %player% First event finalized"
+  SecondEvent:
+    Timer: 60
+    Redeemable for: 5
+    Message: "&aTest event \n&fwad\n&b&lnaphy is COOL"
+    Commands:
+      - "say %player% pressed the message"
+      - "msg %player% Second event finalized, wait for %event_time% seconds!"
